@@ -1,11 +1,9 @@
-import { useState } from 'react'
-// import { RouteProvider } from './routes'
+import { RouteProvider } from './routes'
 
 function App() {
-
   return (
     <>
-      {/* <RouteProvider/> */}
+      <RouteProvider/>
     </>
   )
 }
