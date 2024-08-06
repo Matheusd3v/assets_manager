@@ -16,7 +16,9 @@ module.exports = class ListAssetsUseCase {
      * @returns {Promise<AssetPresentation[]>}
      */
     async execute() {
-        const assetEntities = await this._assetRepository.getAll();
+        const assetEntities = await this._assetRepository.getAll({
+            countSensor: true,
+        });
         return assetEntities.map(AssetMapper.toClient);
     }
 };

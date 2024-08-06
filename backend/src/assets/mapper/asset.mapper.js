@@ -28,7 +28,8 @@ class AssetMapper {
     static toClient(asset) {
         return {
             id: asset._id,
-            name: asset._name
+            name: asset._name,
+            totalSensors: asset.getTotalSensors()
         }
     }
 }
