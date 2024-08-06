@@ -1,8 +1,8 @@
 
 const PATHNAMES = {
     home: "/",
-    asset: "/ativo",
-    sensor: "/sensor"
+    asset: "/ativo/:id",
+    sensor: "/ativo/:id/sensor/:sensorId"
 }
 
 export const ROUTES = {

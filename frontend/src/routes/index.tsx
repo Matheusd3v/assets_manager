@@ -3,7 +3,7 @@ import { NotFoundPage } from "../pages/NotFound";
 import { ROUTES } from "./constants";
 import { HomePage } from "../pages/Home";
 import { AssetPage } from "../pages/Assets";
-import { SensorPage } from "../pages/sensors";
+import { SensorPage } from "../pages/Sensors";
 import { SideBar } from "../components/Sidebar";
 
 export const RouteProvider = () => {
