@@ -25,6 +25,10 @@ class CollectionInMemoryRepository extends ICollectionRepository {
      */
     async delete(sensorId, date) {
         const index = this.database.findIndex((collection) => {
+            if (sensorId && !date) {
+                return collection._sensorId === sensorId;
+            }
+
             return (
                 collection._sensorId === sensorId &&
                 collection._date.getTime() === date.getTime()
@@ -42,6 +46,25 @@ class CollectionInMemoryRepository extends ICollectionRepository {
         return this.database.filter(
             (collection) => collection._sensorId === sensorId
         );
+    }
+
+    /**
+     *
+     * @param {{ sensorId: number | undefined }} param0
+     * @returns {Promise<number>}
+     */
+    async count({ sensorId }) {
+        return this.database.reduce((accumulator, collection) => {
+            if (!sensorId) {
+                return accumulator + 1;
+            }
+
+            if (collection._sensorId === sensorId) {
+                return accumulator + 1;
+            }
+
+            return accumulator;
+        }, 0);        
     }
 }
 

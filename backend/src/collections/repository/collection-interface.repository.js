@@ -28,6 +28,15 @@ class ICollectionRepository {
     getAll(sensorId) {
         throw new Error("Method not implemented");
     }
+
+    /**
+     *
+     * @param {{ sensorId: number | undefined }} param0
+     * @returns {Promise<number>}
+     */
+    async count({ sensorId }) {
+        throw new Error("Method not implemented");
+    }
 }
 
 module.exports = { ICollectionRepository };
