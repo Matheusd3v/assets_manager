@@ -21,6 +21,6 @@ services:
       - 5173
     ports:
       - 5173:5173
-    command: sh -c 'npm run dev'
+    command: sh -c 'npx vite --host 0.0.0.0'
     
     
