@@ -18,7 +18,9 @@ module.exports = class GetSensorUseCase {
      * @returns {Promise<SensorPresentation[]>}
      */
     async execute(assetId) {
-        const sensors = await this._sensorRepository.getAll(assetId);
+        const sensors = await this._sensorRepository.getAll(assetId, {
+            countCollections: true,
+        });
         return sensors.map(SensorMapper.toClient);
     }
 };

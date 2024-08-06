@@ -34,7 +34,8 @@ class SensorMapper {
         return {
             id: sensor._id,
             name: sensor._name,
-            assetId: sensor._assetId
+            assetId: sensor._assetId,
+            totalCollections: sensor.getTotalCollections()
         }
     }
 }
