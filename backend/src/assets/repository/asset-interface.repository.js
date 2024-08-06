@@ -21,10 +21,10 @@ class IAssetRepository extends IRepository {
     }
 
     /**
-     *
+     *  @param {{ countSensor:boolean }} params 
      * @returns {Promise<Asset[]>}
      */
-    async getAll() {
+    async getAll(params) {
         throw new Error("Method not implemented");
     }
 
