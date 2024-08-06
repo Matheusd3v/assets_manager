@@ -58,7 +58,7 @@ class CollectionController {
         return {
             statusCode: HttpStatus.OK,
             body: {
-                data: collections,
+                collections,
             },
         };
     }

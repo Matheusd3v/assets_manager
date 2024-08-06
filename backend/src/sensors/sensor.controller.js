@@ -49,7 +49,7 @@ class SensorController {
         const sensors = await getSensorUseCase.execute(assetId);
         return {
             statusCode: HttpStatus.OK,
-            body: sensors,
+            body: { sensors },
         };
     }
 

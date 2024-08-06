@@ -49,7 +49,7 @@ class AssetController {
         return {
             statusCode: HttpStatus.OK,
             body: {
-                data: assets
+                assets
             }
         }
     }
